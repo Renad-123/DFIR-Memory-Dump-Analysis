@@ -1,6 +1,18 @@
-# DFIR-Memory-Dump-Analysis
-DFIR memory dump analysis using Volatility to recover credentials and extract data from KeePass.
-DFIR memory dump analysis using the Volatility Framework.
-This project focuses on investigating a system memory image to recover sensitive information related to a user who frequently uses web browsers and password managers such as KeePass.
-The analysis includes inspecting environment variables, identifying suspicious artifacts, extracting a password hidden inside a PNG file, and using it to unlock a KeePass database found in memory.
-The memory dump file is not included due to size limitations, but screenshots and analysis notes are provided to demonstrate the investigation process.
+# DFIR Memory Dump Analysis
+
+## Overview
+This project demonstrates a Digital Forensics and Incident Response (DFIR) investigation performed on a system memory dump using the Volatility Framework. The case simulates a real-world scenario in which a client completely lost access to his system due to an unknown error. During the investigation, it was identified that the user is an environmental activist who frequently uses web browsers and password managers, specifically KeePass, to store sensitive information. The primary objective of this analysis was to examine volatile memory, identify suspicious artifacts, recover stored credentials, and extract critical forensic evidence.
+
+---
+
+## Investigation Summary
+The memory dump was analyzed using Volatility plugins to inspect running processes and environment variables. Suspicious environment variables revealed references to a PNG file containing a hidden password. This recovered password was then used to successfully unlock a KeePass database found within the memory dump, allowing the extraction of the required flag.
+
+---
+
+## Tools Used
+- Volatility Framework  
+- KeePass Password Manager  
+- Memory Forensics Techniques  
+
+---
